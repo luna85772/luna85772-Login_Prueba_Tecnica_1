@@ -1,0 +1,116 @@
+/* --- CONFIGURACIÓN DEL HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 9999 !important; /* Lo pone al frente de todo */
+    pointer-events: auto !important;
+}
+
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- NAVEGACIÓN --- */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio uniforme entre elementos */
+}
+
+.nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Efecto de línea inferior solo para enlaces que NO son botones */
+.nav a:not(.btn-login):not(.btn-registro):hover {
+    color: var(--primary-color);
+}
+
+.nav a:not(.btn-login):not(.btn-registro)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav a:not(.btn-login):not(.btn-registro):hover::after {
+    width: 100%;
+}
+
+/* --- BOTONES DE AUTENTICACIÓN (PRUEBA TÉCNICA) --- */
+
+.btn-login {
+    border: 2px solid #0984e3;
+    color: #0984e3 !important; /* Azul para resaltar */
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.btn-login:hover {
+    background-color: #0984e3;
+    color: white !important;
+}
+
+.btn-registro {
+    background-color: #00b894; /* Verde suave psicológico */
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-registro:hover {
+    background-color: #00a884;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
