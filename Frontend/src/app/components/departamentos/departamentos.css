@@ -1,0 +1,78 @@
+/* Estilos para componente de Departamentos */
+.card {
+  border-radius: 12px !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-header {
+  padding: 1.5rem !important;
+  border-bottom: none !important;
+}
+
+.card-body {
+  padding: 1.5rem !important;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control-lg,
+.form-select-lg {
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  gap: 0.5rem;
+}
+
+.input-group .form-control-lg,
+.input-group .btn-lg {
+  border-radius: 8px;
+}
+
+.table {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.table thead th {
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.table-responsive {
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.btn-outline-danger {
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .form-control-lg,
+  .form-select-lg {
+    font-size: 0.85rem;
+  }
+
+  .btn-lg {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

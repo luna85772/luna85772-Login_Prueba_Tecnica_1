@@ -1,0 +1,95 @@
+/* Estilos para componente de Empleados */
+.card {
+  border-radius: 12px !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-header {
+  padding: 1.5rem !important;
+  border-bottom: none !important;
+}
+
+.card-body {
+  padding: 1.5rem !important;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  color: #666 !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 500;
+}
+
+.form-control-lg,
+.form-select-lg {
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-control-lg:focus,
+.form-select-lg:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-lg {
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 500;
+}
+
+.table {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.table thead th {
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.table-responsive {
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.btn-outline-danger {
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transform: translateY(-2px);
+}
+
+/* Mensaje vacío */
+.list-group-item {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .form-control-lg,
+  .form-select-lg {
+    font-size: 0.85rem;
+  }
+
+  .btn-lg {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

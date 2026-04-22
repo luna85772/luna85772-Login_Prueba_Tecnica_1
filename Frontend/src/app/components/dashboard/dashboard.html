@@ -1,0 +1,51 @@
+<div class="dashboard-container">
+  <div class="dashboard-wrapper">
+    <div class="header-section text-center mb-5">
+      <h1 class="display-5 fw-bold text-primary">Panel de Control Administrativo</h1>
+      <p class="lead text-muted">Gestiona empleados y departamentos de forma eficiente</p>
+    </div>
+
+    <!-- Formularios en fila - Contenedor centrado -->
+    <div class="forms-container mb-5">
+      <div class="forms-grid">
+        <div class="form-wrapper">
+          <app-departamentos></app-departamentos>
+        </div>
+        <div class="form-wrapper">
+          <app-empleados></app-empleados>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Distribución -->
+    <div class="distribution-container">
+      <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-header bg-gradient text-white py-4">
+          <h3 class="mb-0"><i class="bi bi-pie-chart"></i> Distribución por Departamentos</h3>
+        </div>
+        <div class="card-body p-4">
+          <div class="distribution-grid">
+            <div *ngFor="let depto of departamentos" class="distribution-card">
+              <div class="card border-left-primary h-100">
+                <div class="card-body">
+                  <h6 class="card-title text-primary fw-bold">{{ depto.nombre }}</h6>
+                  <div class="employee-count">
+                    <span class="badge bg-primary">{{ getEmpleadosPorDepto(depto._id).length }} empleados</span>
+                  </div>
+                  <ul class="list-unstyled mt-3">
+                    <li *ngFor="let emp of getEmpleadosPorDepto(depto._id)" class="py-1">
+                      <small class="text-muted">👤 {{ emp.nombre }} {{ emp.apellido }}</small>
+                    </li>
+                    <li *ngIf="getEmpleadosPorDepto(depto._id).length === 0" class="py-1">
+                      <small class="text-muted italic">No hay empleados</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
