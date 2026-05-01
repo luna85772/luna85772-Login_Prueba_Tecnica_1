@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private API_URL = 'http://localhost:3000/users'; // Tu ruta de Backend
+  private API_URL = 'http://13.59.196.178:9000';
 
   login(userData: any) {
-    return this.http.post(`${this.API_URL}/login`, userData);
+    return this.http.post(`${this.API_URL}/iniciarSesion`, userData);
   }
 
   register(userData: any) {
