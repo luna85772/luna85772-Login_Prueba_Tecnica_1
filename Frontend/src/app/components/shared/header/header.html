@@ -4,10 +4,10 @@
     <span>Anima Psicología</span>
   </div>
 
-<nav class="nav">
-  <a routerLink="/" class="nav-link">Inicio</a>
-  <a [routerLink]="['/login']" class="btn-login">Iniciar Sesión</a>
-  <a [routerLink]="['/register']" class="btn-registro">Registrarse</a>
+<nav class="nav" [class.active]="menuOpen">
+  <a routerLink="/" class="nav-link" (click)="closeMenu()">Inicio</a>
+  <a [routerLink]="['/login']" class="btn-login" (click)="closeMenu()">Iniciar Sesión</a>
+  <a [routerLink]="['/register']" class="btn-registro" (click)="closeMenu()">Registrarse</a>
 </nav>
 
   <div class="menu-toggle" [class.active]="menuOpen" (click)="toggleMenu()">

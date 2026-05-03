@@ -10,7 +10,7 @@ export const routes: Routes = [
   {path : "", component: Home, title: "Inicio"},
   { path: "login", component: LoginComponent, title: "Iniciar Sesión" },
   { path: "register", component: RegisterComponent, title: "Registro" },
-  {path : "inicio", component : Home, title : "Inicio"},
+  {path : "Inicio", component : Home, title : "Inicio"},
   {path : "products", component : ProductsComponent, title : "Productos"},
   {path : "dashboard", component : DashboardComponent, title : "Dashboard"},
   {path : "**", component : PageNotFound, title : "Página no encontrada"}
