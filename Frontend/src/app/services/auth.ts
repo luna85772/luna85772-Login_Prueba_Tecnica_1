@@ -6,13 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private API_URL = 'http://13.59.196.178:9000';
 
   login(userData: any) {
-    return this.http.post(`${this.API_URL}/iniciarSesion`, userData);
+    return this.http.post('/api/iniciarSesion', userData);
   }
 
   register(userData: any) {
-    return this.http.post(`${this.API_URL}/register`, userData);
+    return this.http.post('/api/register', userData);
   }
 }

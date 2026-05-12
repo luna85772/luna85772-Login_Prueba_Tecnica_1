@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "http://13.59.196.178:9000",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "warn"
+  }
+}

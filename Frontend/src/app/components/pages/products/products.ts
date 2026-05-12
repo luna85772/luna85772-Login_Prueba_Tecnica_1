@@ -10,9 +10,10 @@ interface ProductResponse {
 
 @Component({
   selector: 'app-products',
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './products.html',
-  styleUrl: './products.css',
+  styleUrls: ['./products.css'],
 })
 export class ProductsComponent implements OnInit {
   private productService = inject(ProductService);

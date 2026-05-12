@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
   private http = inject(HttpClient);
-  private API_URL = 'http://13.59.196.178:9000/users'; // Cambia a 3000 si el backend está en ese puerto
+  private API_URL = '/api/users';
 
   constructor() { }
 

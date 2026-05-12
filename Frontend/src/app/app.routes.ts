@@ -8,8 +8,8 @@ import { DashboardComponent } from './components/dashboard/dashboard';
 
 export const routes: Routes = [
   {path : "", component: Home, title: "Inicio"},
-  { path: "login", component: LoginComponent, title: "Iniciar Sesión" },
-  { path: "register", component: RegisterComponent, title: "Registro" },
+  {path: "login", component: LoginComponent, title: "Iniciar Sesión" },
+  {path: "register", component: RegisterComponent, title: "Registro" },
   {path : "Inicio", component : Home, title : "Inicio"},
   {path : "products", component : ProductsComponent, title : "Productos"},
   {path : "dashboard", component : DashboardComponent, title : "Dashboard"},
